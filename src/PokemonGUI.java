@@ -41,7 +41,7 @@ public class PokemonGUI {
 
         //Label for Search result
         JLabel resultLabel = new JLabel("");
-        resultLabel.setForeground(Color.blue);
+        resultLabel.setForeground(Color.black);
         resultLabel.setBounds(10, 100, 350, 25);
         panel.add(resultLabel);
 
