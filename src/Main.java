@@ -16,5 +16,9 @@ public class Main {
         //Iniciar a Gui Pokedex
         new PokemonGUI(pokedex);
 
+
+
+
+
     }
 }

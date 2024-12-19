@@ -53,8 +53,8 @@ public class PokemonGUI {
                 boolean found = false;
 
                 for (Pokemon p : pokedex) {
-                    if (p.pokemonName.equalsIgnoreCase(pokemonName)) {
-                        resultLabel.setText(p.pokemonName + " is a " + p.pokemonType + " Pokémon at level " + p.pokemonLevel);
+                    if (p.getPokemonName().equalsIgnoreCase(pokemonName)) {
+                        resultLabel.setText(p.getPokemonName() + " is a " + p.getPokemonType() + " Pokémon at level " + p.getPokemonLevel());
                         found = true;
                         break;
                     }
@@ -65,19 +65,5 @@ public class PokemonGUI {
                 }
             }
         });
-    }
-    public static void main(String[] args) {
-        Pokemon[] pokedex={
-                new Pokemon("Bulbasaur", "Grass, Poison", 5),
-                new Pokemon("Ivysaur", "Grass, Poison", 16),
-                new Pokemon("Venusaur", "Grass, Poison", 32),
-                new Pokemon("Charmander", "Fire", 5),
-                new Pokemon("Charmeleon", "Fire", 16),
-                new Pokemon("Charizard", "Fire", 32),
-                new Pokemon("Squirtle", "Water", 5),
-                new Pokemon("Wartortle", "Water", 16),
-                new Pokemon("Blastoise", "Water", 32)
-        };
-        new PokemonGUI(pokedex);
     }
 }
