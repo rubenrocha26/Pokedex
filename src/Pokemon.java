@@ -11,40 +11,41 @@
     private String pokemonName;
     private PokemonType primaryType;
     private PokemonType secondaryType;
-    private int pokemonLevel;
 
     //Construtor vazio
     public Pokemon(){
         this.dexNumber = 25;
         this.pokemonName = "Pickachu";
-        this.pokemonType = "Eletric";
-        this.pokemonLevel = 5;
+        this.primaryType = ELETRIC
     }
 
     //Construtor
-    public Pokemon(String pokemonName, String pokemonType, int pokemonLevel) {
+    public Pokemon(int dexNumber, String pokemonName, PokemonType primaryType, int pokemonLevel) {
         this.pokemonName = pokemonName;
-        this.pokemonType = pokemonType;
+        this.pokemonType = ;
         this.pokemonLevel = pokemonLevel;
     }
 
     //Methods
-    public String getPokemonName() {
+
+    //return  the name of this Pokemon
+    public String getName() {
         return pokemonName;
     }
 
-    public String getPokemonType() {
-        return pokemonType;
+    //return  the unique number of this Pokemon
+    public int getNumber() {
+        return dexNumber;
     }
 
-    public int getPokemonLevel() {
-        return pokemonLevel;
+
+    //return the primary type of this Pokemon
+    public PokemonType getPrimaryType() {
+        return primaryType;
     }
 
-    public void lvlUp ()  {
-        this.pokemonLevel++;
-    }
-    public void increaseLvlBy(int lvl){
-        this.pokemonLevel += lvl;
+    //return  the secondary type of this Pokemon
+    public PokemonType getSecondaryType() {
+        return secondaryType;
     }
 }*/
