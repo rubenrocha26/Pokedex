@@ -17,7 +17,7 @@ public class Main {
         new PokemonGUI(pokedex);
         */
 
-        PokemonApi pokemonApi = new PokemonApi("Pikachu");
+        PokemonApi pokemonApi = new PokemonApi("pikachu");
         pokemonApi.getPokemonInfo();
 
     }
