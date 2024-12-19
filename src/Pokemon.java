@@ -6,7 +6,7 @@
  * @version 0.1
  */
 
-public class Pokemon {
+/*public class Pokemon {
     private int dexNumber;
     private String pokemonName;
     private PokemonType primaryType;
@@ -47,4 +47,4 @@ public class Pokemon {
     public void increaseLvlBy(int lvl){
         this.pokemonLevel += lvl;
     }
-}
+}*/

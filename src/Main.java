@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        Pokemon p1 = new Pokemon("Bulbassaur", "Grass, Poison", 5);
+ /*         Pokemon p1 = new Pokemon("Bulbassaur", "Grass, Poison", 5);
         Pokemon p2 = new Pokemon("Ivysaur", "Grass, Poison", 16);
         Pokemon p3 = new Pokemon("Venusaur", "Grass, Poison", 32);
         Pokemon p4 = new Pokemon("Charmander", "Fire", 5);
@@ -15,10 +15,10 @@ public class Main {
 
         //Iniciar a Gui Pokedex
         new PokemonGUI(pokedex);
+        */
 
-
-
-
+        PokemonApi pokemonApi = new PokemonApi("pikachu");
+        pokemonApi.getPokemonInfo();
 
     }
 }

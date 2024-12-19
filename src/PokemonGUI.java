@@ -3,7 +3,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class PokemonGUI {
+/*public class PokemonGUI {
     private Pokemon[] pokedex;
     public PokemonGUI(Pokemon[] pokedex) {
         this.pokedex = pokedex;
@@ -66,4 +66,4 @@ public class PokemonGUI {
             }
         });
     }
-}
+}*/
