@@ -1,4 +1,4 @@
-package javaApp;
+package com.pokedex.pokedex;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;

@@ -1,11 +1,11 @@
-package javaApp;
+package com.pokedex.pokedex;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import org.json.JSONObject;
-
 import javax.swing.*;
+
+import org.json.JSONObject;
 
 public class PokemonApi{
 
