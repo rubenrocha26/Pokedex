@@ -16,7 +16,7 @@ public class PokemonApi{
     }
 
 
-    public void getPokemonInfoNameNumberType(JLabel resultLabel) {
+    public void getPokemonInfoNameNumberType(JLabel resultLabel, JLabel imageLabel) {
         try {
             @SuppressWarnings("deprecation")
             URL urlObj = new URL(this.url);
