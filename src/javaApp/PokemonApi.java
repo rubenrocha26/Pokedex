@@ -3,6 +3,9 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import org.json.JSONObject;
+
+import javax.swing.*;
 
 public class PokemonApi{
 
@@ -13,7 +16,7 @@ public class PokemonApi{
     }
 
 
-    public void getPokemonInfo() {
+    public void getPokemonInfoNameNumberType(JLabel resultLabel) {
         try {
             @SuppressWarnings("deprecation")
             URL urlObj = new URL(this.url);
@@ -29,8 +32,20 @@ public class PokemonApi{
             in.close();
             conn.disconnect();
 
-            System.out.println(content.toString());
+            // Parse JSON response
+            JSONObject json = new JSONObject(content.toString());
+            String name = json.getString("name");
+            int dexNumber = json.getInt("id");
+            String primaryType = json.getJSONArray("types").getJSONObject(0).getJSONObject("type").getString("name");
+
+            // Capitalize the first letter of the name
+            name = name.substring(0, 1).toUpperCase() + name.substring(1);
+
+            // Update the JLabel with the extracted information
+            resultLabel.setText("Pokemon: " + name + ", Dex Number: " + dexNumber + ", Type: " + primaryType);
+
         } catch (Exception e) {
+            resultLabel.setText("Error fetching data");
             e.printStackTrace();
         }
     }
