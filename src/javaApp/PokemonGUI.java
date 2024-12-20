@@ -44,13 +44,20 @@ public class PokemonGUI {
         resultLabel.setBounds(10, 100, 350, 25);
         panel.add(resultLabel);
 
+        // Label for Image
+        JLabel imageLabel = new JLabel();
+        imageLabel.setBounds(100, 150, 200, 100);
+        panel.add(imageLabel);
+
+
         //Search Button function
         searchButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String pokemonName = userText.getText();
                 PokemonApi pokemonApi = new PokemonApi(pokemonName);
-                pokemonApi.getPokemonInfoNameNumberType(resultLabel);
+                pokemonApi.getPokemonInfoNameNumberType(resultLabel, imageLabel);
+
             }
 
         });

@@ -1,4 +1,5 @@
 package javaApp;
+import java.awt.*;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
@@ -16,7 +17,7 @@ public class PokemonApi{
     }
 
 
-    public void getPokemonInfoNameNumberType(JLabel resultLabel) {
+    public void getPokemonInfoNameNumberType(JLabel resultLabel, JLabel imageLabel) {
         try {
             @SuppressWarnings("deprecation")
             URL urlObj = new URL(this.url);
@@ -43,6 +44,14 @@ public class PokemonApi{
 
             // Update the JLabel with the extracted information
             resultLabel.setText("Pokemon: " + name + ", Dex Number: " + dexNumber + ", Type: " + primaryType);
+
+            // Set the image
+            String imageUrl = json.getJSONObject("sprites").getString("front_default");
+            ImageIcon imageIcon = new ImageIcon(new URL(imageUrl));
+            Image image = imageIcon.getImage(); // transform it
+            Image newimg = image.getScaledInstance(200, 200,  java.awt.Image.SCALE_SMOOTH); // scale it the smooth way
+            imageIcon = new ImageIcon(newimg);  // transform it back
+            imageLabel.setIcon(imageIcon);
 
         } catch (Exception e) {
             resultLabel.setText("Error fetching data");
