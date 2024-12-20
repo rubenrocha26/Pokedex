@@ -1,4 +1,4 @@
-package java;
+package javaApp;
 public class Main {
     public static void main(String[] args) {
  /*         Pokemon p1 = new Pokemon("Bulbassaur", "Grass, Poison", 5);

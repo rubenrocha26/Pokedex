@@ -1,4 +1,4 @@
-package java;
+package javaApp;
 /**
  * Represents a Pokemon object. Each has a number, a name, and two elemental
  * types, chosen from the PokemonType enumeration.
