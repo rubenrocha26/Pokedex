@@ -1,0 +1,18 @@
+body { 
+    background-color: #CDC1FF;
+}
+
+
+#submitButton {
+    border-radius: 100px;
+}
+
+#pokemonLogo {
+    width: 300px; 
+    height: auto;
+}
+
+#error {
+    color: red;
+}
+
