@@ -1,4 +1,4 @@
-package pokedexwebapp;
+/*package pokedexwebapp;
 
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
@@ -62,3 +62,4 @@ public class PokedexController {
     }
 
 }
+*/
