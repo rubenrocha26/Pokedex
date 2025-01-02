@@ -15,7 +15,6 @@ public class PokedexApiService {
     
     public String getPokemonApiData() {
         try {
-            @SuppressWarnings("deprecation")
             URL urlObj = new URL(_url);
             HttpURLConnection conn = (HttpURLConnection) urlObj.openConnection();
             conn.setRequestMethod("GET");
